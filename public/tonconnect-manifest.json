@@ -1,6 +1,7 @@
 {
-    "url": "https://testweb3-seven.vercel.app/profile",
+    "url": "https://testweb3-seven.vercel.app",
     "name": "pnk_pnk",
-    "iconUrl": "https://github.com/kotpavlik/testweb3/blob/main/public/tonpng.png"
-
+    "iconUrl": "https://github.com/kotpavlik/testweb3/blob/main/public/tonpng.png",
+    "termsOfUseUrl": "",
+    "privacyPolicyUrl": ""
 }
