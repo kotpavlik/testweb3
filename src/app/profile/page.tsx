@@ -6,7 +6,7 @@ const UserProfile = () => {
     return (
 
         <TonConnectUIProvider
-            manifestUrl="https://vercel.com/kotpavliks-projects/testweb3/Duwkpfbr57yf3TQbiKyJhMBmSXqV/source?f=src%2Ftonconnect-manifest.json"
+            manifestUrl="https://github.com/kotpavlik/testweb3/blob/main/tonconnect-manifest.json"
             actionsConfiguration={{ twaReturnUrl: 'https://calc-jam-app.vercel.app/' }}>
             <div>
                 Hello
