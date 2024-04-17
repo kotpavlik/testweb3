@@ -13,6 +13,7 @@ const UserProfile = () => {
             </div>
         </TonConnectUIProvider >
 
+
     );
 }
 export default UserProfile;
