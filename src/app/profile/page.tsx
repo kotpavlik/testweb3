@@ -6,7 +6,7 @@ const UserProfile = () => {
     return (
 
         <TonConnectUIProvider
-            manifestUrl="https://github.com/kotpavlik/testweb3/tree/main/public/tonconnect-manifest.json">
+            manifestUrl="https://kotpavlik.github.io/testweb3/public/tonconnect-manifest.json">
             <div>
                 Hello
                 <TonConnectButton className="m-2 " />
