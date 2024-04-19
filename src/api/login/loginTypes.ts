@@ -9,26 +9,32 @@ export type ResponseLoginDataType = {
 
 export type LoginResponseData = {
     message: string,
-    session: SessionDataType
+    session_id: string
     user: UserDataType
+    token: TokensType
 }
-type SessionDataType = {
+
+export type TokensType = {
+    refresh_token: string
+    access_token: string
+}
+export type SessionDataType = {
     user_id: string
     _id: string
+    refreshToken: string
     __v?: number
 }
 export type UserDataType = {
+    activaitionLink: string | null
     avatar: null | string
     avatarId: null | string
     role?: roleEnum
     _id: string
     email: string
     password: string
-    firstName: string
-    lastName: string
-    gender?: genderEnum
-    phone: null | string
-
+    name: string
+    isActivated: boolean
+    __v?: number
 }
 export enum roleEnum {
     basic_user = 'basic_user',

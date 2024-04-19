@@ -40,7 +40,7 @@ const slice = createSlice({
             state.user_id = action.payload.user._id
             state.message = action.payload.message
             state.password = action.payload.user.password
-            state.session_id = action.payload.session._id
+            state.session_id = action.payload.session_id
             state.auth = true
         },
         signup(state, action: PayloadAction<LoginResponseData>) {
@@ -48,7 +48,7 @@ const slice = createSlice({
             state.user_id = action.payload.user._id
             state.message = action.payload.message
             state.password = action.payload.user.password
-            state.session_id = action.payload.session._id
+            state.session_id = action.payload.session_id
             state.auth = true
         }
     }
@@ -67,7 +67,7 @@ export const loginTC = (data: RequestLoginDataType) => async (dispatch: AppDispa
         dispatch(login(login_data))
         dispatch(setStatus({ status: 'succeeded' }))
         dispatch(setProfile(user))
-        Cookies.set('sessionId', login_data.session._id, { expires: 7 });
+        Cookies.set('sessionId', login_data.session_id, { expires: 7 });
         // dispatch(setProfileDataAC({ data: res })) need create this logic
     } catch (e) {
         const err = e as Error | AxiosError
@@ -84,7 +84,7 @@ export const registrationTC = (data: ReqRegestrationType) => async (dispatch: Ap
         dispatch(signup(login_data))
         dispatch(setStatus({ status: 'succeeded' }))
         dispatch(setProfile(user))
-        Cookies.set('sessionId', login_data.session._id, { expires: 7 });
+        Cookies.set('sessionId', login_data.session_id, { expires: 7 });
         // dispatch(setProfileDataAC({ data: res })) need create this logic
     } catch (e) {
         const err = e as Error | AxiosError
