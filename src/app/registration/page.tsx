@@ -31,7 +31,7 @@ const Registration = () => {
     const auth = useAppSelector(state => state.Login.auth)
     const router = useRouter()
 
-    const phoneNumberRules = /^\+(?:\d{1,4}\s?)?(?:\(\d{1,4}\)\s?)?\d{1,4}[-\s]?\d{1,4}[-\s]?\d{1,9}$/;
+
     const nameRegExp = /[a-zA-zа-яА-яёЁ]$/;
 
     const formik = useFormik({
@@ -69,7 +69,7 @@ const Registration = () => {
     }
 
     const redirectToRegistration = () => {
-        // router.push('/login')
+        router.push('/')
     }
 
     return (
@@ -139,7 +139,10 @@ const Registration = () => {
                                 </div>}
                         </div>
 
-                        <MyButton name='registration' type='submit' buttonHandler={redirectToRegistration} />
+                        <MyButton name='registration' type='submit' />
+                        <div className='mt-6'>
+                            <MyButton name='login' type='button' buttonHandler={redirectToRegistration} />
+                        </div>
                     </form>
 
                 </div>
