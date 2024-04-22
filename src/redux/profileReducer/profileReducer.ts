@@ -7,10 +7,10 @@ const initialState: UserDataType = {
     avatar: null,
     avatarId: null,
     email: '',
-    firstName: '',
-    lastName: '',
+    name: '',
     password: '',
-    phone: null,
+    activaitionLink: '',
+    isActivated: false
 }
 
 
